@@ -1,13 +1,23 @@
 /* eslint-disable import/prefer-default-export */
 
 import makeRequest from '../helpers/http-request';
-import { MAKE_AUTH_REQUEST } from '../constants';
+import { HANDLE_LOGIN, HANDLE_REGISTER } from '../constants';
 
-export const makeAuthRequest = (username, password) => dispatch => {
-    const authUrl = `${process.env.API_URL}/auth`;
+export const handleLogin = (username, password) => dispatch => {
+    const url = `${process.env.API_URL}/user/authenticate`;
     const body = {
         username,
         password,
     };
-    makeRequest(authUrl, body, dispatch, MAKE_AUTH_REQUEST);
+    makeRequest(url, body, dispatch, HANDLE_LOGIN);
+};
+
+export const handleRegister = (email, username, password) => dispatch => {
+    const url = `${process.env.API_URL}/user/create`;
+    const body = {
+        email,
+        username,
+        password,
+    };
+    makeRequest(url, body, dispatch, HANDLE_REGISTER);
 };

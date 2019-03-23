@@ -1,6 +1,6 @@
 /* eslint-disable arrow-body-style, prettier/prettier, max-len */
 
-import { MAKE_AUTH_REQUEST } from '../constants';
+import { HANDLE_LOGIN, HANDLE_REGISTER } from '../constants';
 
 const initialState = {
     token: null,
@@ -8,10 +8,15 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case MAKE_AUTH_REQUEST:
+        case HANDLE_LOGIN:
             return {
                 ...state,
-                token: action.payload.token,
+                jwt: action.payload.jwt,
+            };
+        case HANDLE_REGISTER:
+            return {
+                ...state,
+                jwt: action.payload.jwt,
             };
         default:
             return state;
