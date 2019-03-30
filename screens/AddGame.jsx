@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
-import { Text, Button, TextInput, StyleSheet } from 'react-native';
+import { Button, TextInput, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { addGame as _addGame } from '../store/actions/game';
 
@@ -57,12 +57,14 @@ class AddGame extends Component {
                 />
                 <TextInput
                     value={this.state.score1}
+                    keyboardType="numeric"
                     onChangeText={score1 => this.setState({ score1 })}
                     placeholder="Score One"
                     style={styles.input}
                 />
                 <TextInput
                     value={this.state.score2}
+                    keyboardType="numeric"
                     onChangeText={score2 => this.setState({ score2 })}
                     placeholder="Score Two"
                     style={styles.input}

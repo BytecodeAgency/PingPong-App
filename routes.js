@@ -5,6 +5,8 @@ import ErrorScreen from './screens/Error';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import AddGame from './screens/AddGame';
+import Matches from './screens/Matches';
+import Standings from './screens/Standings';
 
 const options = {
     headerMode: 'none',
@@ -17,6 +19,8 @@ const AppNavigator = createStackNavigator(
         Login: { screen: Login },
         Register: { screen: Register },
         AddGame: { screen: AddGame },
+        Matches: { screen: Matches },
+        Standings: { screen: Standings },
     },
     options,
 );
