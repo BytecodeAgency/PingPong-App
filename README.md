@@ -34,3 +34,10 @@ For building the standalone apps, see the [Expo documentation for Building Stand
 ## License
 
 This project is licenced under the AGPL-3.0 license.
+
+## To Do List
+
+- [ ] Add login and register flow
+- [ ] Add new match with score
+- [ ] Edit existing match score
+- [ ] Add all-time score screen
