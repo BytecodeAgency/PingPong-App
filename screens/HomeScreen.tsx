@@ -159,11 +159,15 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         textAlign: 'center',
     },
+    // @ts-ignore
     tabBarInfoContainer: {
         position: 'absolute',
         bottom: 0,
         left: 0,
         right: 0,
+        alignItems: 'center',
+        backgroundColor: '#fbfbfb',
+        paddingVertical: 20,
         ...Platform.select({
             ios: {
                 shadowColor: 'black',
@@ -175,9 +179,6 @@ const styles = StyleSheet.create({
                 elevation: 20,
             },
         }),
-        alignItems: 'center',
-        backgroundColor: '#fbfbfb',
-        paddingVertical: 20,
     },
     tabBarInfoText: {
         fontSize: 17,
