@@ -1,4 +1,3 @@
-// import { NavigationActions } from 'react-navigation';
 import { ErrorActions } from '../constants';
 
 export const addError = (message: string) => (dispatch: AddError) => {
