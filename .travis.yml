@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "lts/*"
+  - "10"
+
+install:
+  - npm i -g yarn
+  - yarn
+
+script:
+  - yarn run test
+  - yarn run lint
+  - yarn run build
+
+cache:
+  yarn: true
+  directories:
+    - node_modules

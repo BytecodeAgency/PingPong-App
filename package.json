@@ -4,8 +4,13 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+    "lint": "tslint --project tsconfig.json",
     "eject": "expo eject",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    "build": "tsc",
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "test:coverage": "node ./node_modules/jest/bin/jest.js -i --coverage",
+    "reinstall": "rm -rf node_modules && yarn",
+    "clean": "rm -rf dist build coverage"
   },
   "jest": {
     "preset": "jest-expo"
@@ -20,8 +25,13 @@
   "devDependencies": {
     "@types/expo": "^32.0.13",
     "@types/react-native": "^0.57.60",
+    "@types/react-navigation": "^3.0.7",
+    "@types/react-test-renderer": "^16.8.1",
     "babel-preset-expo": "^5.0.0",
     "jest-expo": "^32.0.0",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.3.0"
   },
   "private": true
