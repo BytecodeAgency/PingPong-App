@@ -19,6 +19,8 @@
         "strictNullChecks": true,
         "strictFunctionTypes": true,
         "strictPropertyInitialization": true,
+        "skipDefaultLibCheck": true,
+        "skipLibCheck": true,
         "target": "esnext"
     },
     "exclude": [
