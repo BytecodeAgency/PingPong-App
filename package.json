@@ -18,8 +18,11 @@
     "react-navigation": "^3.0.9"
   },
   "devDependencies": {
+    "@types/expo": "^32.0.0",
+    "@types/react-native": "^0.57.0",
     "babel-preset-expo": "^5.0.0",
-    "jest-expo": "^32.0.0"
+    "jest-expo": "^32.0.0",
+    "typescript": "^3.3.0"
   },
   "private": true
 }
